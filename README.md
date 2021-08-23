@@ -9,4 +9,4 @@ Telegram Bot Service
   $result = $bot->sendMessageTo($chat_id, $message);
   ```
 # Example
-  Watch full example at [example.php](https://github.com/Korzinkayablok/TelegramBot/blob/master/example.php)
+  Watch full example at [example.php](https://github.com/apuc/telegram_bot/blob/version-1.0/example.php)
