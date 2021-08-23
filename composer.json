@@ -1,0 +1,22 @@
+{
+    "name": "ivanivanton/telegram_bot",
+    "description": "Telegram Bot Service",
+    "type": "library",
+    "require": {
+        "telegram-bot/api": "^2.3",
+        "php": ">=5.3.0"
+    },
+    "license": "proprietary",
+    "autoload": {
+        "psr-4": {
+            "Apuc\\TelegramBot\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ivaniv Anton",
+            "email": "anton.o.ivaniv@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
