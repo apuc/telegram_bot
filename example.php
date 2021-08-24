@@ -2,7 +2,7 @@
 
 require 'vendor/autoload.php';
 
-use Apuc\TelegramBot\TelegramBotService;
+use kavalar\TelegramBotService;
 
 $token;
 $chat_id;

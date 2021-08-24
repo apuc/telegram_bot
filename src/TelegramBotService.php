@@ -1,6 +1,6 @@
 <?php
 
-namespace Apuc\TelegramBot;
+namespace kavalar;
 
 use \TelegramBot\Api\BotApi;
 
