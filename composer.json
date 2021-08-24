@@ -1,5 +1,5 @@
 {
-    "name": "ivanivanton/telegram_bot",
+    "name": "kavalar/telegram_bot",
     "description": "Telegram Bot Service",
     "type": "library",
     "require": {
