@@ -6,3 +6,4 @@ class NoSuchTemplateException extends TelegramBotServiceException
 {
 
 }
+

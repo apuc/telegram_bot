@@ -6,3 +6,4 @@ class NoSuchAttributeException extends TelegramBotServiceException
 {
 
 }
+
