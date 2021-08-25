@@ -17,7 +17,7 @@ $templates = [
 $attributes = [
     'name' => 'Jhon'
 ];
-/// Used custom templates
+
 $templateProcessor = new BotNotificationTemplateProcessor($templates);
 $message = $templateProcessor->renderTemplate('example', $attributes);
 
