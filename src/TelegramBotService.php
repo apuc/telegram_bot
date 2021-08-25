@@ -28,15 +28,15 @@ class TelegramBotService
      * Use this method to send message to given chat.
      * On success, the sent \TelegramBot\Api\Types\Message is returned.
      *
-     * @throws Api\Exception
-     * @throws Api\InvalidArgumentException
-     * @throws Api\HttpException When chat is not found
-
      * @param $chat_id int Telegram chat id
      * @param $message string Message to send
      *
+     * @throws Api\HttpException When chat is not found
+     * @throws Api\Exception
+     * @throws Api\InvalidArgumentException
      */
-    public function sendMessageTo($chat_id, $message) {
+    public function sendMessageTo($chat_id, $message)
+    {
         return $this->bot->sendMessage($chat_id, $message);
     }
 }

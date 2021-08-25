@@ -24,7 +24,7 @@ class BotNotificationTemplateProcessor
      */
     public function __construct($templates = [])
     {
-        if(empty($templates)) {
+        if (empty($templates)) {
             $templates = require_once __DIR__ . '/default_templates.php';
         }
         $this->templates = $templates;
@@ -40,13 +40,14 @@ class BotNotificationTemplateProcessor
      *  'name' => 'Jhon'
      * ]
      * </pre>
-     *@throws NoSuchTemplateException
+     * @throws NoSuchTemplateException
      * @throws NoSuchAttributeException
      *
      */
-    public function renderTemplate($template_name, $parameters) {
+    public function renderTemplate($template_name, $parameters)
+    {
         $template = $this->templates[$template_name] ?? '';
-        if(empty($template)) {
+        if (empty($template)) {
             throw new NoSuchTemplateException();
         }
         $result = $template;
@@ -55,7 +56,7 @@ class BotNotificationTemplateProcessor
         $matches = $matches[0];
         foreach ($matches as $match) {
             $parameter_name = substr($match, 1, -1);
-            if(!isset($parameters[$parameter_name])) {
+            if (!isset($parameters[$parameter_name])) {
                 throw new NoSuchAttributeException();
             }
 

@@ -2,7 +2,7 @@
 
 namespace kavalar\exceptions;
 
-class NoSuchAttributeException extends \Exception
+class NoSuchAttributeException extends TelegramBotServiceException
 {
 
 }
