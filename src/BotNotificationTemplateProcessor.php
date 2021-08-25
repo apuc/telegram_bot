@@ -12,14 +12,12 @@ class BotNotificationTemplateProcessor
     /**
      * @param array $templates
      * <pre>
-     * <i>Template array format</i>
      * [
      *   'template_name' => "Hello ~name~"
      * ];
      *
      * </pre>
-     * There is default param value.<br>
-     * Default template seek in <i>'/src/default_templates.php'</i>
+     *Default templates seek in <i>'/src/default_templates.php'</i>
      *
      */
     public function __construct($templates = [])
@@ -35,7 +33,6 @@ class BotNotificationTemplateProcessor
      * @param $parameters array Params array
      *
      * <pre>
-     * <i>Example</i>
      * [
      *  'name' => 'Jhon'
      * ]

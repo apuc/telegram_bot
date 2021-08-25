@@ -83,4 +83,4 @@ Throws [NoSuchAttributeException](https://github.com/apuc/telegram_bot/blob/mast
   $result = $bot->sendMessageTo($chat_id, $message);
   ```
 
-Watch full example at [example.php](https://github.com/apuc/telegram_bot/blob/master/example.php)
+Watch full example at [example.php](https://github.com/apuc/telegram_bot/blob/master/examples/example.php)
