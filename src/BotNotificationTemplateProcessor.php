@@ -5,6 +5,11 @@ namespace kavalar;
 use kavalar\exceptions\NoSuchParameterException;
 use kavalar\exceptions\NoSuchTemplateException;
 
+/**
+ * This class provides string template rendering
+ * @author Ivaniv Anton <anton.o.ivaniv@gmail.com>
+ *
+ */
 class BotNotificationTemplateProcessor
 {
     protected $templates;
@@ -15,7 +20,6 @@ class BotNotificationTemplateProcessor
      * [
      *   'template_name' => "Hello ~name~"
      * ];
-     *
      * </pre>
      *
      */
@@ -59,5 +63,12 @@ class BotNotificationTemplateProcessor
         return $result;
     }
 
+    /**
+     * @param array $templates
+     */
+    public function setTemplates(array $templates)
+    {
+        $this->templates = $templates;
+    }
 
 }
