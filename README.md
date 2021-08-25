@@ -24,17 +24,13 @@ Use this method to send message to given chat.
 <i>$templates</i> is associative array such format
 
  ```php
-    [
-        'template_name' => "Hello ~name~"
-    ];
+[
+    'template_name' => "Hello ~name~"
+];
  ```
 
 Where `~name~` is parameter which could be rendered by `renderTemplate` method
 
-`$templates` default value you can see
-at [default_templates.php](https://github.com/apuc/telegram_bot/blob/master/src/default_templates.php)
-<br>
-<br>
 
 ### renderTemplate($template_name, $parameters)
 
@@ -48,27 +44,14 @@ Returns rendered template
 ];
  ```
 
-Throws [NoSuchAttributeException](https://github.com/apuc/telegram_bot/blob/master/src/exceptions/NoSuchAttributeException.php)
-,
+Throws [NoSuchParameterException](https://github.com/apuc/telegram_bot/blob/master/src/exceptions/NoSuchParameterException.php),
 [NoSuchTemplateException](https://github.com/apuc/telegram_bot/blob/master/src/exceptions/NoSuchTemplateException.php),
 
 # Example
 
   ```php
- $attributes = [
-    'phone' => "83134131",
-    'email' => "jhon@example.com",
-    'comment' => "jhon@example.com",
-    'profile_id' => '1'
-  ];
 
   $bot = new TelegramBotService($token);
-
-  /// Used default templates
-  $templateProcessor = new BotNotificationTemplateProcessor();
-  $message = $templateProcessor->renderTemplate('interview_request', $attributes);
-
-  $result = $bot->sendMessageTo($chat_id, $message);
 
   $templates = [
       'example' => "Hello ~name~"
@@ -76,9 +59,9 @@ Throws [NoSuchAttributeException](https://github.com/apuc/telegram_bot/blob/mast
   $attributes = [
       'name' => 'Jhon'
   ];
-  /// Used custom templates
+  
   $templateProcessor = new BotNotificationTemplateProcessor($templates);
-  $message = $templateProcessor->renderTemplate('interview_request', $attributes);
+  $message = $templateProcessor->renderTemplate('example', $attributes);
 
   $result = $bot->sendMessageTo($chat_id, $message);
   ```

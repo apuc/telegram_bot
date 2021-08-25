@@ -9,20 +9,7 @@ $token;
 $chat_id;
 $message;
 
-$attributes = [
-    'phone' => "83134131",
-    'email' => "jhon@example.com",
-    'comment' => "jhon@example.com",
-    'profile_id' => '1'
-];
-
 $bot = new TelegramBotService($token);
-
-/// Used default templates
-$templateProcessor = new BotNotificationTemplateProcessor();
-$message = $templateProcessor->renderTemplate('interview_request', $attributes);
-
-$result = $bot->sendMessageTo($chat_id, $message);
 
 $templates = [
     'example' => "Hello ~name~"

@@ -2,7 +2,7 @@
 
 namespace kavalar;
 
-use kavalar\exceptions\NoSuchAttributeException;
+use kavalar\exceptions\NoSuchParameterException;
 use kavalar\exceptions\NoSuchTemplateException;
 
 class BotNotificationTemplateProcessor
@@ -17,14 +17,10 @@ class BotNotificationTemplateProcessor
      * ];
      *
      * </pre>
-     *Default templates seek in <i>'/src/default_templates.php'</i>
      *
      */
     public function __construct($templates = [])
     {
-        if (empty($templates)) {
-            $templates = require_once __DIR__ . '/default_templates.php';
-        }
         $this->templates = $templates;
     }
 
@@ -38,7 +34,7 @@ class BotNotificationTemplateProcessor
      * ]
      * </pre>
      * @throws NoSuchTemplateException
-     * @throws NoSuchAttributeException
+     * @throws NoSuchParameterException
      *
      */
     public function renderTemplate($template_name, $parameters)
@@ -54,7 +50,7 @@ class BotNotificationTemplateProcessor
         foreach ($matches as $match) {
             $parameter_name = substr($match, 1, -1);
             if (!isset($parameters[$parameter_name])) {
-                throw new NoSuchAttributeException();
+                throw new NoSuchParameterException();
             }
 
             $parameter_value = $parameters[$parameter_name];
